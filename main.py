@@ -107,6 +107,7 @@ if __name__ == '__main__':
     # labels = list(zip(df.index, df.Value.round(decimals=2)))
     labels = ['%s\n %.1f Gallons' % label for label in zip(df.index, df.Value.round(decimals=1))]
 
+    plt.figure(figsize=(7.5, 5.5))
     sq.plot(sizes=df.Value, label=labels, color=color_list, pad=True)
     plt.axis('off')
     plt.title('Average Water Volume Used by Equipment')
