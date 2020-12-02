@@ -37,6 +37,7 @@ if __name__ == '__main__':
     plt.title('Total Water Use')
 
     plt.tight_layout()
+    plt.savefig('TotalVolume.png')
     plt.show()
 
     # Volume plot without Irrigation
@@ -54,6 +55,7 @@ if __name__ == '__main__':
     plt.title('Total Water Use Excluding Irrigation')
 
     plt.tight_layout()
+    plt.savefig('TotalVolumeIrr.png')
     plt.show()
 
     # Duration plot
@@ -74,6 +76,7 @@ if __name__ == '__main__':
     plt.title('Equipment Duration')
 
     plt.tight_layout()
+    plt.savefig('Duration.png')
     plt.show()
 
     # Duration without irrigation plot
@@ -92,6 +95,7 @@ if __name__ == '__main__':
     plt.title('Equipment Duration Excluding Irrigation')
 
     plt.tight_layout()
+    plt.savefig('DurationIrr.png')
     plt.show()
 
     # Mean volume plot
@@ -109,4 +113,5 @@ if __name__ == '__main__':
     plt.title('Average Water Volume Used by Equipment')
 
     plt.tight_layout()
+    plt.savefig('VolumeAVG.png')
     plt.show()
