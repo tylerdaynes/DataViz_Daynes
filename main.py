@@ -50,6 +50,7 @@ if __name__ == '__main__':
     circle = plt.Circle((0, 0), 0.7, color='white')
     p = plt.gcf()
     p.gca().add_artist(circle)
+    text = f'Total Water Used: {round(df.Value.sum(), 2):,} Gallons'
     plt.text(0, 0, text, ha='center', wrap=True)
     plt.axis('equal')
     plt.title('Total Water Use Excluding Irrigation')
