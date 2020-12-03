@@ -31,10 +31,10 @@ if __name__ == '__main__':
     circle = plt.Circle((0, 0), 0.7, color='white')
     p = plt.gcf()
     p.gca().add_artist(circle)
-    text = f'Total Water Used: {round(df.Value.sum(), 2):,} Gallons'
+    text = f'Total Volume: {round(df.Value.sum(), 2):,} Gallons'
     plt.text(0, 0, text, ha='center', wrap=True)
     plt.axis('equal')
-    plt.title('Total Water Use')
+    plt.title('Total Volume Used')
 
     plt.tight_layout()
     plt.savefig('./Plots/TotalVolume.png')
@@ -50,10 +50,10 @@ if __name__ == '__main__':
     circle = plt.Circle((0, 0), 0.7, color='white')
     p = plt.gcf()
     p.gca().add_artist(circle)
-    text = f'Total Water Used: {round(df.Value.sum(), 2):,} Gallons'
+    text = f'Total Volume {round(df.Value.sum(), 2):,} Gallons'
     plt.text(0, 0, text, ha='center', wrap=True)
     plt.axis('equal')
-    plt.title('Total Water Use Excluding Irrigation')
+    plt.title('Total Volume Used Excluding Irrigation')
 
     plt.tight_layout()
     plt.savefig('./Plots/TotalVolumeIrr.png')
@@ -71,10 +71,10 @@ if __name__ == '__main__':
     circle = plt.Circle((0, 0), 0.7, color='white')
     p = plt.gcf()
     p.gca().add_artist(circle)
-    text = f'Total Equipment Duration: {round(df.Value.sum() / 60, 2):,} Hours'
+    text = f'Total Operating Time: {round(df.Value.sum() / 60, 2):,} Hours'
     plt.text(0, 0, text, ha='center', wrap=True)
     plt.axis('equal')
-    plt.title('Equipment Duration')
+    plt.title('Equipment Operating Time')
 
     plt.tight_layout()
     plt.savefig('./Plots/Duration.png')
@@ -90,10 +90,10 @@ if __name__ == '__main__':
     circle = plt.Circle((0, 0), 0.7, color='white')
     p = plt.gcf()
     p.gca().add_artist(circle)
-    text = f'Total Equipment Duration: {round(df.Value.sum() / 60, 2):,} Hours'
+    text = f'Total Operating Time: {round(df.Value.sum() / 60, 2):,} Hours'
     plt.text(0, 0, text, ha='center', wrap=True)
     plt.axis('equal')
-    plt.title('Equipment Duration Excluding Irrigation')
+    plt.title('Equipment Operating Time Excluding Irrigation')
 
     plt.tight_layout()
     plt.savefig('./Plots/DurationIrr.png')
@@ -111,7 +111,7 @@ if __name__ == '__main__':
     plt.figure(figsize=(7.5, 5.5))
     sq.plot(sizes=df.Value, label=labels, color=color_list, pad=True)
     plt.axis('off')
-    plt.title('Average Water Volume Used by Equipment')
+    plt.title('Average Volume Used in Each Occurrence')
 
     plt.tight_layout()
     plt.savefig('./Plots/VolumeAVG.png')
